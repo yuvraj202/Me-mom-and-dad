@@ -1,0 +1,50 @@
+body{
+    
+   background-color:pink;
+    
+}
+
+.color{
+    
+    color: white;
+    font-weight: bold;
+}
+
+#l12345{
+    
+    width: 500px;
+}
+
+.col{
+    
+    color:darkslateblue;
+
+}
+
+#camera 
+  {
+    border: 2px dashed black;
+    width: 350px;
+    height: 300px; 
+  }
+
+#capturedimage 
+  {
+    border:1px dashed black;
+    width: 250px;
+    height: 250px; 
+  }
+
+.h1234{
+    
+    color:red;
+    width: 2000px;
+    height: 1px
+}
+.cooo{
+
+   font-size: 20px;
+    color: lightcoral;
+    font-weight: bold;
+    
+}

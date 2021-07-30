@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Image Recognition Web app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+      <center>
+        <h3 class="col">FACE RECOGNITION WEB APP</h3>
+        <br>
+        <h4 class="color">Model is trained to Identify the following Family Member:</h4>
+        <hr>
+        <button class="btn btn-primary" id="l12345">Papa</button>
+        <hr>
+        
+        <button class="btn btn-primary" id="l12345">Maa</button>
+        <hr>
+        
+        <button class="btn btn-primary" id="l12345">Yuvraj</button>
+        <hr>
+        
+        <button class="btn btn-primary" id="l12345">Papa + Yuvraj</button>
+        <hr>
+        
+        <button class="btn btn-primary" id="l12345">Maa + Yuvraj</button>
+        <hr>
+        
+        <span>
+        <h5 class="color">Webcan View -</h5>
+        <div id="camera"></div>
+        <br>
+        <div id="result"></div>
+        <br>
+        </span>   
+        <span>
+            <button onclick="take_snapshot()" class="btn btn-success">Captured Image</button>
+            <br>
+            <br>
+            <button onclick="identify_image()" class="btn btn-primary">Identify Image</button>
+            <br>
+            <br>
+              <p class="cooo">Object :<span id="result_object"></span></p>
+            <br>
+            <p class="cooo">Accuracy :<span id="result_accuracy"></span></p>
+            
+            <hr class="h1234">
+            <hr class="h1234">
+            <hr class="h1234">
+            <hr class="h1234">
+            <hr>
+          
+        </span>
+       </center>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
