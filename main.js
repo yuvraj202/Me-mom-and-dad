@@ -7,7 +7,7 @@ Webcam.set({
 
 camera = document.getElementById("camera");
 
-Webcam.attach('camera');
+Webcam.attach("camera");
 
 
 
@@ -20,13 +20,18 @@ function take_snapshot() {
 console.log("ml5.version", ml5.version);
 //   https://teachablemachine.withgoogle.com/models/Bb8Jf7KvR/    //
 
-classifier = ml5.imageclassifier('https://teachablemachine.withgoogle.com/models/Bb8Jf7KvR/',      modelLaoded);
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/Bb8Jf7KvR/model.json', modelLoaded);
 
-console.log("Model Loaded!");
+
+function modelLoaded() {
+
+    console.log("Model Loaded!");
+
+}
 
 function identify_image() {
     img = document.getElementById("captured_image");
-    classifier.classify('img', gotResult);
+    classifier.classify(img, gotResult);
 }
 
 function gotResult(error, results) {
@@ -36,8 +41,8 @@ function gotResult(error, results) {
         console.log(error);
     } else {
 
-        concole.log(results);
-        document.getElementById("result_object").innerHTML = results[0].lable;
+        console.log(results);
+        document.getElementById("result_object").innerHTML = results[0].label;
         document.getElementById("result_accuracy").innerHTML = results[0].confidence.toFixed(3);
     }
 
